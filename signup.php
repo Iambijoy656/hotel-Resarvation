@@ -4,8 +4,8 @@ require_once 'header.php';
 
 <div>
        <h2>Ragistration with Us</h2>
-
-       <div class="form">
+          <form action="user-save.php" method="post">
+          <div class="regform">
            <label for="name">Full Name</label>
            <input type="text" name="name" required>
            <label for="nnumber">Mobile Number</label>
@@ -19,6 +19,8 @@ require_once 'header.php';
            
           
        </div>
+          </form>  
+       
    </div>
    <div class="touch">
        <h2>Get In Touch</h2>

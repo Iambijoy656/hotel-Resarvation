@@ -115,13 +115,13 @@ h2{
 
 /* end service */
 
-.form{
+.regform{
     padding: 0 16rem 4rem;
     margin: auto;
 }
 
 @media(max-width : 600px){
-    .form{
+    .regform{
         padding: 0 4rem;
     }
 }
@@ -130,7 +130,7 @@ h2{
      width: 400px;
  }
 
- .form button{
+ .regform button{
      background-color: black;
      color:white;
      border: none;
@@ -138,7 +138,7 @@ h2{
      outline: none;
  }
 
- .form button:hover{
+ .regform button:hover{
      background-color:skyblue;
      color: green;
  }

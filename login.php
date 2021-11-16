@@ -1,10 +1,26 @@
 <?php
+session_start();
 require_once 'header.php';
 ?>
 <body>
     <form action="check.php" method="post">
         <div class="login-form">
             <h1>Login Form</h1>
+
+            <?php if($_SESSION["email_error"]) {?>
+                <div class="alert alert-danger" role="alert">
+            <?php  echo $_SESSION["email_error"]; ?>
+            </div>
+            <?php }?>
+
+
+            <?php if($_SESSION["password_error"]){?>
+                <div class="alert alert-danger" role="alert">
+            <?php  echo $_SESSION["password_error"]; ?>
+            </div>
+            <?php }?>
+
+ 
             <p>Email</p>
             <input type="email" name="email" placeholder="email">
             <p>Password</p>
