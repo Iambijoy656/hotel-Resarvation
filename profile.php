@@ -23,9 +23,7 @@
                    <li><a href="#">Room</a></li>
                    <li><a href="#">gallary</a></li>
                    <li><a href="#">Contact</a></li>
-                   
-                   <li><a href="signup.php">sing Up</a></li>
-                   <li><a href="login.php">login</a></li>
+                   <li><a href="logout.php">logout</a></li>
                    
                    
                </ul>

@@ -7,16 +7,22 @@ require_once 'header.php';
         <div class="login-form">
             <h1>Login Form</h1>
 
-            <?php if($_SESSION["email_error"]) {?>
+            <?php if(isset($_SESSION["email_error"])  && $_SESSION["email_error"]) {?>
                 <div class="alert alert-danger" role="alert">
             <?php  echo $_SESSION["email_error"]; ?>
             </div>
             <?php }?>
 
 
-            <?php if($_SESSION["password_error"]){?>
+            <?php if(isset($_SESSION["password_error"])&& $_SESSION["password_error"]){?>
                 <div class="alert alert-danger" role="alert">
             <?php  echo $_SESSION["password_error"]; ?>
+            </div>
+            <?php }?>
+
+            <?php if(isset($_SESSION["error_msg"])&& $_SESSION["error_msg"]){?>
+                <div class="alert alert-danger" role="alert">
+            <?php  echo $_SESSION["error_msg"]; ?>
             </div>
             <?php }?>
 
