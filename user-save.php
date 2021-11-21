@@ -11,9 +11,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $sql= "INSERT INTO users ( name, number, email , password, roles_id) VALUES ( '$name', '$number', '$email', '$password', '2')";
 
     if($con->query($sql)){
-        echo "inserted succesfull";
+        header("location:login.php");
     }else {
-        echo "failed";
+        header("location:signup.php");
     }
 
 }

@@ -1,8 +1,12 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["id"]) && !$_SESSION["id"]) {
-    header("location: login.php");
+if(isset($_SESSION["id"]) && $_SESSION["id"]) {
+   if($_SESSION["id"] !=1){
+       header("location:profile.php");
+   }
+}else{
+    header("location:login.php");
 }
 ?>
 
@@ -21,16 +25,17 @@ if(!isset($_SESSION["id"]) && !$_SESSION["id"]) {
 
    <div class="main-header">
        <div class="header">
-           <h1>Hotel Management</h1>
+           <h1>Admin page</h1>
            <h1></h1>
            <div class="navigation">
                <ul>
-               <li><a href="#">Admin</a></li>
+               
                    <li><a href="#">Home</a></li>
                    <li><a href="#">About</a></li>
                    <li><a href="#">Room</a></li>
                    <li><a href="#">gallary</a></li>
                    <li><a href="#">Contact</a></li>
+                   <li><a href="user-index.php">Users</a></li>
                    <li><a href="logout.php">logout</a></li>
                    
                    

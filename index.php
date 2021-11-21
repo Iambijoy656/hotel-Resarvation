@@ -10,7 +10,7 @@ require_once 'header.php';
                <ul>
                    <li><a href="#">Home</a></li>
                    <li><a href="#">About</a></li>
-                   <li><a href="#">Room</a></li>
+                   <li><a href="#">Room-Booking</a></li>
                    <li><a href="#">gallary</a></li>
                    <li><a href="#">Contact</a></li>
                   
