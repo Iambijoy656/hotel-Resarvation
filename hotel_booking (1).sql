@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2021 at 05:41 PM
+-- Generation Time: Nov 24, 2021 at 11:47 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -29,13 +29,45 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `checked` (
   `id` int(11) NOT NULL,
-  `room_id` int(11) NOT NULL,
   `name` varchar(20) COLLATE utf16_bin NOT NULL,
+  `email` varchar(20) COLLATE utf16_bin NOT NULL,
   `number` int(11) NOT NULL,
-  `date_in` datetime NOT NULL,
-  `date_out` datetime NOT NULL,
-  `room_type` datetime NOT NULL
+  `checkin_date` datetime NOT NULL,
+  `checkout_date` datetime NOT NULL,
+  `room_type` varchar(11) COLLATE utf16_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+
+--
+-- Dumping data for table `checked`
+--
+
+INSERT INTO `checked` (`id`, `name`, `email`, `number`, `checkin_date`, `checkout_date`, `room_type`) VALUES
+(124, 'sonjoy saha', 'sonjoy@gmail.com', 1865800656, '2021-11-24 00:00:00', '2021-11-30 00:00:00', 'single-room'),
+(125, 'Bijoy das', 'bijoy@gmail.com', 1865800656, '2021-11-24 00:00:00', '2021-12-07 00:00:00', 'Double-room'),
+(127, 'pritom das', 'protom@gmail.com', 1865800656, '2021-11-24 00:00:00', '2021-11-30 00:00:00', 'Double-room');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) COLLATE utf16_bin DEFAULT NULL,
+  `email` varchar(20) COLLATE utf16_bin NOT NULL,
+  `massage` varchar(50) COLLATE utf16_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `massage`) VALUES
+(1, 'sonjoy saha', 'sonjoy@gmail.com', 'dfrhh'),
+(4, 'sonjoy saha', 'sonjoy@gmail.com', 'degef'),
+(5, 'JIBON KUMAR DAS', 'roy69779@gmail.com', 'sdgvbag'),
+(6, 'bijoy', 'bijoy@gmail.com', 'DSFbeGH');
 
 -- --------------------------------------------------------
 
@@ -79,7 +111,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `number`, `email`, `password`, `roles_id`) VALUES
 (1, 'Bijoy', 1865800656, 'bijoy@gmail.com', '12345', 1),
-(3, 'sonjoy saha', 1865800656, 'sonjoy@gmail.com', '12345', 2);
+(3, 'sonjoy saha', 1865800656, 'sonjoy@gmail.com', '12345', 2),
+(13, 'joy', 1865800656, 'joy@gmail.com', '12345', 2);
 
 --
 -- Indexes for dumped tables
@@ -89,6 +122,12 @@ INSERT INTO `users` (`id`, `name`, `number`, `email`, `password`, `roles_id`) VA
 -- Indexes for table `checked`
 --
 ALTER TABLE `checked`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -111,7 +150,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `checked`
 --
 ALTER TABLE `checked`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -123,7 +168,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

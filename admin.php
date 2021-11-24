@@ -34,8 +34,9 @@ if(isset($_SESSION["id"]) && $_SESSION["id"]) {
                    <li><a href="#">About</a></li>
                    <li><a href="#">Room</a></li>
                    <li><a href="#">gallary</a></li>
-                   <li><a href="#">Contact</a></li>
+                   <li><a href="check-msg.php">Contact-Massage</a></li>
                    <li><a href="user-index.php">Users</a></li>
+                   <li><a href="booking-details.php">Booking-Details</a></li>
                    <li><a href="logout.php">logout</a></li>
                    
                    

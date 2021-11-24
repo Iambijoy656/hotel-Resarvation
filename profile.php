@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +23,10 @@
                <ul>
               
                    <li><a href="#">Home</a></li>
-                   <li><a href="#">About</a></li>
-                   <li><a href="#">Room</a></li>
+                   <li><a href="about.php">About</a></li>
+                   <li><a href="room-booking.php">Room-booking</a></li>
                    <li><a href="#">gallary</a></li>
-                   <li><a href="#">Contact</a></li>
+                   <li><a href="contact.php">Contact</a></li>
                    <li><a href="logout.php">logout</a></li>
                    
                    
