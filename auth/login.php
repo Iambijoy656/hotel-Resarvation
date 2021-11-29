@@ -1,9 +1,10 @@
 <?php
 session_start();
-require_once 'header.php';
+require_once '../partial/header.php';
 ?>
 <body>
-    <form action="check.php" method="post">
+       <div class="d-flex justify-content-center">
+       <form action="check.php" method="post">
         <div class="login-form">
             <h1>Login Form</h1>
 
@@ -37,7 +38,8 @@ require_once 'header.php';
                 <p>Go to registration form <a href="signup.php">click here</a></p>
             </div>
         </div>
-    </form>
+        </form>
+       </div>
 
     <div class="touch">
        <h2>Get In Touch</h2>

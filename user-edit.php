@@ -1,7 +1,6 @@
 <?php
 session_start();
-require_once 'header.php';
-require_once 'db.php';
+require_once './config/db.php';
 
 $user="";
 
@@ -17,11 +16,10 @@ if(isset($_SESSION["id"]) && $_SESSION["id"]) {
    $user=$result->fetch_assoc();
 
 
-
-
 }else{
     header("location:login.php");
 }
+require_once './partial/header.php';
 ?>
 
 <div>

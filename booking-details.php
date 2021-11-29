@@ -7,13 +7,13 @@ if(isset($_SESSION["id"]) && $_SESSION["id"]) {
        header("location:profile.php");
    }
 }else{
-    header("location:login.php");
+    header("location:./auth/login.php");
 }
 
 
-require_once 'header.php';
+require_once './partial/header.php';
 
-require_once 'db.php';
+require_once './config/db.php';
 
 $query= "select * from checked";
 

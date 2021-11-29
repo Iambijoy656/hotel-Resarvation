@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once('db.php');
+require_once('../config/db.php');
 
 if($_SERVER["REQUEST_METHOD"]== "POST"){
     $_SESSION["email_error"]= "";
@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 
         if($result->num_rows>0){
 
-                $user= $result->fetch_assoc();
+           $user= $result->fetch_assoc();
 
             $_SESSION["id"]=$user["id"];
             $_SESSION["name"]=$user["name"];
@@ -28,14 +28,16 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 
 
             $role= $user["roles_id"];
+            
             // print_r($role);
+            // die();
 
             if($role==1){
-                header("location:admin.php");
+                header("location:../admin/admin.php");
             }
 
             if($role==2){
-                header("location:profile.php");
+                header("location:../profile.php");
             }
         }else {
             $_SESSION["error_msg"]= "Username and password is wrong, try again!";

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'header.php';
+require_once './partial/header.php';
 ?>
 
    <div class="main-header">
