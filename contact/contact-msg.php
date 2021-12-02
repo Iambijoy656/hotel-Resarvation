@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once('db.php');
+require_once('../config/db.php');
 
 if($_SERVER["REQUEST_METHOD"]== "POST"){
     $_SESSION["massage"]= "";

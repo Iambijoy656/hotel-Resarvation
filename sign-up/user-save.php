@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db.php';
+require_once '../config/db.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = $_POST["name"];
@@ -11,9 +11,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $sql= "INSERT INTO users ( name, number, email , password, roles_id) VALUES ( '$name', '$number', '$email', '$password', '2')";
 
     if($con->query($sql)){
-        header("location:login.php");
+        header("location:../auth/login.php");
     }else {
-        header("location:signup.php");
+        header("location:../sign-up/signup.php");
     }
 
 }

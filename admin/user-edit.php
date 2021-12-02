@@ -1,21 +1,43 @@
 <?php
-require_once 'header.php';
+session_start();
+require_once '../config/db.php';
+
+$user="";
+
+
+if(isset($_SESSION["id"]) && $_SESSION["id"]) {
+   if($_SESSION["id"] !=1){
+       header("location:../profile.php");
+   }
+
+   $user_id = $_GET["id"];
+   $query = "select * from users where id ='$user_id'";
+   $result=$con->query($query);
+   $user=$result->fetch_assoc();
+
+
+}else{
+    header("location:../auth/login.php");
+}
+require_once '../partial/header.php';
 ?>
 
 <div>
-       <h2>Ragistration with Us</h2>
-          <form action="user-save.php" method="post">
+       <h2>Update profile</h2>
+          <form action="user-update.php" method="post">
+
           <div class="regform">
+            <input type="hidden" name= "user_id" value="<?php echo $user["id"]; ?> ">
            <label for="name">Full Name</label>
-           <input type="text" name="name" required>
+           <input type="text" name="name" value=<?php echo $user["name"]; ?> required>
            <label for="nnumber">Mobile Number</label>
-           <input type="number" name="number">
+           <input type="number" name="number" value=<?php echo $user["number"]; ?>>
            <label for="email">Email</label>
-           <input type="email" name="email">
+           <input type="email" name="email" value=<?php echo $user["email"]; ?>>
            <label for="name">Password</label>
-           <input type="password" name="password">
+           <input type="password" name="password" value=<?php echo $user["password"]; ?>>
            <br>
-           <button>Sing Up</button>
+           <button>Update</button>
            
           
        </div>

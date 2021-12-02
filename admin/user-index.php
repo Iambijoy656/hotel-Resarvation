@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once './partial/header.php';
+require_once '../partial/header.php';
 
-require_once './config/db.php';
+require_once '../config/db.php';
 $query= "select users.*, roles.name as role_name from users inner join roles on users.roles_id = roles.id";
 
 $user= $con->query($query);

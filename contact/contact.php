@@ -8,7 +8,7 @@
     <meta name="keywords" content="web Design,Afordable web Design and professional web design">
     <title>Bijoy Web Design |Services</title>
     <link rel="icon" href="img/images.jpg">
-    <link rel="stylesheet" href="bijoy.css">
+    <link rel="stylesheet" href="../css/bijoy.css">
 </head>
 <body>
 
@@ -77,7 +77,7 @@
 
 
 
-                   <form class="quote" action="contact-msg.php" method="post">
+                   <form class="quote" action="../contact/contact-msg.php" method="post">
                        <div>
                            <label for="name">Name:</label><br>
                            <input type="text" id="name" name="name" placeholder="Enter your name" required>

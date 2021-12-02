@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "header.php";
+require_once "../partial/header.php";
 ?>
 
 <?php if(isset($_SESSION["book_msg"])&& $_SESSION["book_msg"]){?>

@@ -1,14 +1,14 @@
 <?php
 session_start();
-require_once 'header.php';
-require_once 'db.php';
+require_once '../partial/header.php';
+require_once '../config/db.php';
 
 $user="";
 
 
 if(isset($_SESSION["id"]) && $_SESSION["id"]) {
    if($_SESSION["id"] !=1){
-       header("location:profile.php");
+       header("location:../profile.php");
    }
 
    $user_id = $_GET["id"];
@@ -20,7 +20,7 @@ if(isset($_SESSION["id"]) && $_SESSION["id"]) {
 
 
 }else{
-    header("location:login.php");
+    header("location:../auth/login.php");
 }
 ?>
 

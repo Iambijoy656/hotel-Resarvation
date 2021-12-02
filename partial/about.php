@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Afordable and professional web design">
     <meta name="keywords" content="web Design,Afordable web Design and professional web design">
-    <title>Bijoy Web Design |About</title>
+    <title>About</title>
     <link rel="icon" href="img/images.jpg">
-    <link rel="stylesheet" href="bijoy.css">
+    <link rel="stylesheet" href="../css/bijoy.css">
 </head>
 <body>
       <header>

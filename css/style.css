@@ -14,7 +14,7 @@ body{
 }
 
 .main-header{
-    background: url(./image/GWmEMb.jpg) center no-repeat;
+    background: url(../image/GWmEMb.jpg) center no-repeat;
     background-size: cover;
     background-position: fixed;
     height:100vh;
